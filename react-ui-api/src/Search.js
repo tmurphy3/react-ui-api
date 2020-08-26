@@ -1,8 +1,9 @@
 import React from 'react'
+import './Search.css';
 
 const Search = () => {
     return (
-        <div>
+        <div class="filterContainer">
             <div class="filter">
                 <form>
                     <input type="text" class="input" placeholder="YYYY-MM-DD" />
@@ -13,4 +14,4 @@ const Search = () => {
     )
 }
 
-export default Search
+export default Search;

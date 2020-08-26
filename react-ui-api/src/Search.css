@@ -1,0 +1,7 @@
+.filterContainer {
+    height: 10vh;
+    background: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

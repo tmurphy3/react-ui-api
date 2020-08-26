@@ -1,0 +1,7 @@
+.modalContainer {
+    height: 130vh;
+    background: green;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 20px;
+}
