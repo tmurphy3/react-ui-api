@@ -6,10 +6,10 @@ import Modal from './Modal'
 function App() {
   return (
     <div className="App">
-      <div class="intro">NASA APOD</div>
+      <div className="intro">NASA APOD</div>
       <Search />
       <Modal />
-      <div class="footer">footer</div>
+      <div className="footer">footer</div>
     </div>
   );
 }

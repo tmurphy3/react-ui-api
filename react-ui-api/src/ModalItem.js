@@ -1,14 +1,13 @@
 import React from 'react'
 import './ModalItem.css'
 
-const ModalItem = ({title, explanation, background}) => {
+const ModalItem = ({ background }) => {
     return (
         <div>
-            <div class="modalItem" style={{
-                background: `url(${background})`
+            <div className="modalItem" style={{
+                background: `url(${background})`,
+                backgroundSize: 'cover'
             }}>
-                <div class="title">{title}</div>
-                <div class="explanation">{explanation}</div>
             </div>
         </div>
     )

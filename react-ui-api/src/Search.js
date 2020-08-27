@@ -3,11 +3,11 @@ import './Search.css';
 
 const Search = () => {
     return (
-        <div class="filterContainer">
-            <div class="filter">
+        <div className="filterContainer">
+            <div className="filter">
                 <form>
-                    <input type="text" class="input" placeholder="YYYY-MM-DD" />
-                    <button class="searchButton">Search</button>
+                    <input type="text" className="input" placeholder="YYYY-MM-DD" />
+                    <button className="searchButton">Search</button>
                 </form>
             </div>
         </div>

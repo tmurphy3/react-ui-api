@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './Modal.css';
 import ModalItem from './ModalItem'
+import ModalViewItem from './ModalViewItem'
 
 const Modal = () => {
-    const [state, setState] = useState([])
+    const [nasaList, setNasaList] = useState([])
 
     useEffect(() => {
         for (let j = 11; j < 13; j++) {
@@ -22,21 +23,37 @@ const Modal = () => {
                 fetch(choiceURL)
                 .then(res => res.json())
                 .then(res => {
-                    console.log(res)
-                    let newValue = res
-                    setState(oldArray => [...oldArray, newValue])
+                    let newNasaListItem = res
+                    setNasaList(oldNasaList => [...oldNasaList, newNasaListItem])
                 })
             }
         }
     }, [])
+    
+    const showModal = () => {
+        console.log("hi")
+    }
 
+    const hideModal = () => {
+        console.log("bye")
+    }
+    
     return (
-        <div class="modalContainer">
-            {state.map(element => {
-                return (
-                    <ModalItem title={element.title} explanation={element.explanation} background={element.url}/>
-                )
-            })}
+        <div>
+            <div className="modalContainer" onClick={showModal}>
+                {nasaList.map((element, i) => {
+                    return (
+                        <ModalItem key={i} background={element.url} />
+                    )
+                })}
+            </div>
+            <div className="pic and words" onClick={hideModal}>
+                {nasaList.map((element, i) => {
+                    return (
+                        <ModalViewItem key={i} title={element.title} explanation={element.explanation} date={element.date} background={element.url} />
+                    )
+                })}
+            </div>
         </div>
     )
 }
