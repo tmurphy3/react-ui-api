@@ -22,7 +22,8 @@ const Modal = () => {
                 fetch(choiceURL)
                 .then(res => res.json())
                 .then(res => {
-                    let newValue = res.title
+                    console.log(res)
+                    let newValue = res
                     setState(oldArray => [...oldArray, newValue])
                 })
             }
@@ -33,9 +34,7 @@ const Modal = () => {
         <div class="modalContainer">
             {state.map(element => {
                 return (
-                    <div>
-                        <ModalItem name={element} />
-                    </div>
+                    <ModalItem title={element.title} explanation={element.explanation} background={element.url}/>
                 )
             })}
         </div>
