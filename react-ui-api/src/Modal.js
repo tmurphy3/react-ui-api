@@ -37,20 +37,24 @@ const Modal = () => {
     const hideModal = () => {
         console.log("bye")
     }
-    
+
     return (
         <div>
-            <div className="modalContainer" onClick={showModal}>
+            <div className="modalContainer">
                 {nasaList.map((element, i) => {
                     return (
-                        <ModalItem key={i} background={element.url} />
+                        <div onClick={showModal}>
+                            <ModalItem key={i} background={element.url} date={element.date}/>
+                        </div>
                     )
                 })}
             </div>
-            <div className="pic and words" onClick={hideModal}>
+            <div className="pic and words">
                 {nasaList.map((element, i) => {
                     return (
-                        <ModalViewItem key={i} title={element.title} explanation={element.explanation} date={element.date} background={element.url} />
+                        <div onClick={hideModal}>
+                            <ModalViewItem key={i} date={element.date}/>
+                        </div>
                     )
                 })}
             </div>
