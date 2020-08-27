@@ -1,10 +1,10 @@
 import React from 'react'
 import './ModalItem.css'
 
-const ModalItem = () => {
+const ModalItem = ({name}) => {
     return (
         <div>
-            <div class="modalItem">modalItem</div>
+            <div class="modalItem">{name}</div>
         </div>
     )
 }
