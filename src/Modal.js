@@ -11,19 +11,19 @@ const Modal = () => {
     const [hidden, setHidden] = useState('hidden')
 
     useEffect(() => {
-        for (let j = 11; j < 13; j++) {
+        for (let j = 4; j < 6; j++) {
             let month = j.toString()
             if (month.length === 1) {
                 month = "0" + month
                 console.log(month)
             }
-            for (let i = 25; i < 30; i++) {
+            for (let i = 5; i < 10; i++) {
                 let day = i.toString()
                 if (day.length === 1) {
                     day = "0" + day
                 }
                 //interpolate days and months into url
-                let choiceURL = `https://api.nasa.gov/planetary/apod?api_key=oKwdbMT2N85wHNYQKRlSpik1Ek8aSgQHfwv8IY0J&date=2019-${month}-${day}`
+                let choiceURL = `https://api.nasa.gov/planetary/apod?api_key=oKwdbMT2N85wHNYQKRlSpik1Ek8aSgQHfwv8IY0J&date=2020-${month}-${day}`
                 fetch(choiceURL)
                 .then(res => res.json())
                 .then(res => {
