@@ -5,3 +5,13 @@
     grid-template-columns: 1fr 1fr;
     padding-top: 20px;
 }
+
+.picWords {
+    background: rgb(0, 0, 0, .75);
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
