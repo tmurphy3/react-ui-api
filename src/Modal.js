@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react'
 import './Modal.css';
 import ModalItem from './ModalItem'
 import ModalViewItem from './ModalViewItem'
+//import ReactDOM from 'react-dom';
+import App from './App'
 
 const Modal = () => {
     const [nasaList, setNasaList] = useState([])
-    const [modal, setModal] =useState('')
+    const [modal, setModal] = useState('')
+    const [hidden, setHidden] = useState('hidden')
 
     useEffect(() => {
         for (let j = 11; j < 13; j++) {
@@ -33,10 +36,15 @@ const Modal = () => {
     
     const changeModalDate = (newModalDate) => {
         setModal(newModalDate)
+        setTimeout( () => {setHidden('visible')}, 200)
+    }
+
+    const turnOffModal = () => {
+        setHidden('hidden')
     }
 
     return (
-        <div>
+        <>
             <div className="modalContainer">
                 {nasaList.map((element, i) => {
                     return (
@@ -46,13 +54,16 @@ const Modal = () => {
                     )
                 })}
             </div>
-            <div className="picWords">
+            <div id={hidden} className="picWords" onClick={ () => turnOffModal()}>
                 <div className="picWordsHolder">
                     <ModalViewItem date={modal} />
                 </div>
             </div>
-        </div>
+        </>
     )
+
+    //ReactDOM.render(<ModalViewItem date={modal} />, document.getElementById('root'))
+
 }
 
 export default Modal;

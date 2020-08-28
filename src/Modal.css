@@ -6,15 +6,22 @@
 }
 
 .picWords {
-    background: rgb(0, 0, 0, .96);
-    height: 95vh;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
+#hidden {
+    visibility: hidden;
+}
+#visible {
+    visibility: visible;
+}
 .picWordsHolder {
     width: 80%;
 }

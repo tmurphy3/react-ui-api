@@ -31,8 +31,6 @@ const Search = () => {
             </div>
         </div>
     )
-
-    ReactDOM.render(<ModalViewItem date={picDate} />, document.getElementById('root'))
 }
 
 export default Search;
