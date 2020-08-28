@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Search.css';
 import ModalViewItem from './ModalViewItem'
+import ReactDOM from 'react-dom';
 
 const Search = () => {
     const [value, setValue] = React.useState('');
@@ -30,6 +31,8 @@ const Search = () => {
             </div>
         </div>
     )
+
+    ReactDOM.render(<ModalViewItem date={picDate} />, document.getElementById('root'))
 }
 
 export default Search;
