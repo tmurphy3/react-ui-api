@@ -4,7 +4,7 @@ import ModalViewItem from './ModalViewItem'
 
 const Search = () => {
     const [value, setValue] = React.useState('');
-    const [picDate, setPicDate] = useState('')
+    const [picDate, setPicDate] = useState('2020-02-02')
 
     const handleSubmit = (e) => {
         if (value) {

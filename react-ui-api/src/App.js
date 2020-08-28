@@ -9,7 +9,7 @@ function App() {
       <div className="intro">NASA APOD</div>
       <Search />
       <Modal />
-      <div className="footer">footer</div>
+      <div className="footer">footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer</div>
     </div>
   );
 }

@@ -47,7 +47,9 @@ const Modal = () => {
                 })}
             </div>
             <div className="picWords">
-                <ModalViewItem date={modal} />
+                <div className="picWordsHolder">
+                    <ModalViewItem date={modal} />
+                </div>
             </div>
         </div>
     )

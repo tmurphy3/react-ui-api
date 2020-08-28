@@ -4,11 +4,13 @@
 .intro {
   text-align: left;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.96);
   color: white;
   font-weight: bold;
+  border-bottom: solid rgb(81, 203, 191);
 }
 .footer {
-  height: 10vh;
-  background: purple;
+  height: 4vh;
+  background: rgb(35, 65, 96);
+  color: white;
 }
