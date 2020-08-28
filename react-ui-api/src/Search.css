@@ -1,0 +1,21 @@
+.filterContainer {
+    height: 90vh;
+    background: rgb(79, 111, 111);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+}
+.searchedPic {
+    height: 50vh;
+    width: 100%;
+    margin: 20px;
+}
+.filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
