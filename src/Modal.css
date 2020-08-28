@@ -4,7 +4,6 @@
     grid-template-columns: 1fr 1fr;
     padding-top: 20px;
 }
-
 .picWords {
     position: fixed;
     top: 0;
@@ -24,4 +23,6 @@
 }
 .picWordsHolder {
     width: 80%;
+    background: white;
+    color: black;
 }

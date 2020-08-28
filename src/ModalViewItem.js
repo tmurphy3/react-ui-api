@@ -19,8 +19,7 @@ const ModalViewItem = ({ date }) => {
     return (
         <div className="modalViewItemContainer">
             <div className="modalViewItem" style={{
-                background: `url(${background})`,
-                backgroundSize: 'cover'
+                background: `url(${background})`
             }}>
             </div>
             <div>
